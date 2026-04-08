@@ -80,7 +80,7 @@ runs:
         set -x
 
         nix run \
-          "${GITHUB_ACTION_PATH}#update-flake-inputs" -- \
+          "git+https://git.qo.is/fabianhauser/update-flake-inputs-gitea.git#update-flake-inputs" -- \
           --gitea-url "${{ inputs.gitea-url }}" \
           --gitea-token "${{ inputs.gitea-token }}" \
           --gitea-repository "${{ inputs.gitea-repository }}" \
